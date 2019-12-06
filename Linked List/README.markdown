@@ -8,9 +8,7 @@ Before you continue on to the rest of the article, I wanted to take a moment to 
 
 In section 2.4 of App Development with Swift, the book talked briefly about classes being reference types. (This is also why the following article uses classes instead of structs). Feel free to revisit that section, but there's one sentence that I think makes the connection, especially now that you've read more about memory.
 
-“So the constant or variable does not contain the value itself, it points to the value in memory.”[^1]
-
-[^1]: Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2019. Apple Books. https://books.apple.com/us/book/app-development-with-swift/id1465002990
+“So the constant or variable does not contain the value itself, it points to the value in memory.”[1]
 
 Pointers are just constants or variables that _point_ to classes, whereas constants and variables for structs just store the value, not where it is in memory. 
  
@@ -649,6 +647,9 @@ Linked lists are flexible but many operations are **O(n)**.
 When performing operations on a linked list, you always need to be careful to update the relevant `next` and `previous` pointers, and possibly also the `head` and `tail` pointers. If you mess this up, your list will no longer be correct and your program will likely crash at some point. Be careful!
 
 When processing lists, you can often use recursion: process the first element and then recursively call the function again on the rest of the list. You’re done when there is no next element. This is why linked lists are the foundation of functional programming languages such as LISP.
+
+[1]: Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2019. Apple Books. https://books.apple.com/us/book/app-development-with-swift/id1465002990
+
 
 *Originally written by Matthijs Hollemans for Ray Wenderlich's Swift Algorithm Club*
 

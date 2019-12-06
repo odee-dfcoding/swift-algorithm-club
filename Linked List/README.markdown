@@ -2,6 +2,22 @@
 
 > This topic has been tutorialized [here](https://www.raywenderlich.com/144083/swift-algorithm-club-swift-linked-list-data-structure)
 
+## Preface (Sam)
+
+Before you continue on to the rest of the article, I wanted to take a moment to call out a term used frequently here and in computer science: pointer. 
+
+In section 2.4 of App Development with Swift, the book talked briefly about classes being reference types. (This is also why the following article uses classes instead of structs). Feel free to revisit that section, but there's one sentence that I think makes the connection, especially now that you've read more about memory.
+
+“So the constant or variable does not contain the value itself, it points to the value in memory.”[^1]
+
+[^1]: Excerpt From: Apple Education. “App Development with Swift.” Apple Inc. - Education, 2019. Apple Books. https://books.apple.com/us/book/app-development-with-swift/id1465002990
+
+Pointers are just constants or variables that _point_ to classes, whereas constants and variables for structs just store the value, not where it is in memory. 
+ 
+Back to the article.
+
+## Linked Lists
+ 
 A linked list is a sequence of data items, just like an array. But where an array allocates a big block of memory to store the objects, the elements in a linked list are totally separate objects in memory and are connected through links:
 
 	+--------+    +--------+    +--------+    +--------+
@@ -238,7 +254,7 @@ First we check whether the given index is 0 or not. Because if it is 0, it retur
 However, when the given index is greater than 0, it starts at head then keeps following the node.next pointers to step through the list.
 The difference from count method at this time is that there are two termination conditions.
 One is when the for-loop statement reaches index, and we were able to acquire the node of the given index.
-The second is when `node.next` in for-loop statement returns nil and cause break. (*1)
+The second is when `node.next` in for-loop statement returns nil and calls break. (*1)
 This means that the given index is out of bounds and it causes a crash.
 
 Try it out:
@@ -292,7 +308,7 @@ Let's write a method that lets you insert a new node at any index in the list.
 }
 ```
 
-As with node(atIndex :) method, insert(_: at:) method also branches depending on whether the given index is 0 or not.
+As with the node(atIndex :) method, the insert(_: at:) method also branches depending on whether the given index is 0 or not.
 First let's look at the former case. Suppose we have the following list and the new node(C).
 
              +---------+     +---------+
@@ -618,7 +634,8 @@ public struct LinkedListIndex<T> : Comparable
 }
 ```
 
-Finally, the linked is is able to calculate the index after a given one with the following implementation.
+Finally, the linked list is able to calculate the index after a given one with the following implementation.
+
 ```swift
 public func index(after idx: Index) -> Index {
   return LinkedListIndex<T>(node: idx.node?.next, tag: idx.tag+1)

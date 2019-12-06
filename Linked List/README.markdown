@@ -72,7 +72,7 @@ This is a generic type, so `T` can be any kind of data that you'd like to store 
 
 Ours is a doubly-linked list and each node has a `next` and `previous` pointer. These can be `nil` if there are no next or previous nodes, so these variables must be optionals. (In what follows, I'll point out which functions would need to change if this was just a singly- instead of a doubly-linked list.)
 
-> **Note:** To avoid ownership cycles, we declare the `previous` pointer to be weak. If you have a node `A` that is followed by node `B` in the list, then `A` points to `B` but also `B` points to `A`. In certain circumstances, this ownership cycle can cause nodes to be kept alive even after you deleted them. We don't want that, so we make one of the pointers `weak` to break the cycle.
+> **Note:** To avoid retain cycles, we declare the `previous` pointer to be weak. If you have a node `A` that is followed by node `B` in the list, then `A` points to `B` but also `B` points to `A`. In certain circumstances, this ownership cycle can cause nodes to be kept alive even after you deleted them. We don't want that, so we make one of the pointers `weak` to break the cycle.
 
 Let's start building `LinkedList`. Here's the first bit:
 
@@ -634,3 +634,5 @@ When performing operations on a linked list, you always need to be careful to up
 When processing lists, you can often use recursion: process the first element and then recursively call the function again on the rest of the list. You’re done when there is no next element. This is why linked lists are the foundation of functional programming languages such as LISP.
 
 *Originally written by Matthijs Hollemans for Ray Wenderlich's Swift Algorithm Club*
+
+*Modified by Sam Smith for Digital Flagship's Swift Coding and App Development course*

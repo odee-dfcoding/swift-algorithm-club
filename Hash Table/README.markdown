@@ -127,6 +127,8 @@ public struct HashTable<Key: Hashable, Value> {
   }
 ```
 
+> **Note:** `private(set) public var` just means that the variable can be read by anything but not changed anywhere but within `HashTable`.
+
 The `HashTable` is a generic container, and the two generic types are named `Key` (which must be `Hashable`) and `Value`. We also define two other types: `Element` is a key/value pair for using in a chain, and `Bucket` is an array of such `Elements`.
 
 The main array is named `buckets`. It has a fixed size, the so-called capacity, provided by the `init(capacity)` method. We are also keeping track of how many items have been added to the hash table using the `count` variable.

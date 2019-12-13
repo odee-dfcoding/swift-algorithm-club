@@ -25,6 +25,25 @@ public indirect enum BinaryTree<T> {
 }
 ```
 
+```swift
+public class BinaryTree<T> {
+	public var value: T
+	private var leftBinaryTree: BinaryTree?
+	private var rightBinaryTree: BinaryTree?
+	week private var parent: BinaryTree?
+	public var count: Int {
+		return 1 + leftBinaryTree?.count + rightBinaryTree?.count
+	}
+	
+	init(data value: T) {
+		value = value
+		
+		leftBinaryTree = nil
+		rightBinaryTree = nil
+	}
+}
+```
+
 As an example of how to use this, let's build that tree of arithmetic operations:
 
 ```swift

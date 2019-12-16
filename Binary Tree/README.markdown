@@ -14,16 +14,13 @@ For example, here is a binary tree that represents a sequence of arithmetical op
 
 ![A binary tree](Images/Operations.png)
 
+(Sam) I want to walk through the example above for a moment just to clarify it in case anyone isn't sure what's going on.
+
+If you start at the top of the tree, you have a plus that will add everything on the left side to everything on the right side. The node on the left is another operation instead of a number though, so it will need to multiply what's on its left and right first. The left is a number, so checking the right, there's another operation. Finally there are just two values, so you would subtract 10 from a, and then do `5 * (a - 10)`, and then give the top node that value. You could then go through and do the same on the right side. Since `4` is an only child, it just becomes a negative number.
+
 ## The code
 
 Here's how you could implement a general-purpose binary tree in Swift:
-
-```swift
-public indirect enum BinaryTree<T> {
-  case node(BinaryTree<T>, T, BinaryTree<T>)
-  case empty
-}
-```
 
 ```swift
 public class BinaryTree<T> {

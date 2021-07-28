@@ -1,5 +1,4 @@
 # Binary Trees
-_Written by Sam Smith 12/16/2019, Swift 5_
 
 A binary tree is made up of connected nodes like regular trees. The main difference is that binary trees can only have up to 2 children (hence being a binary tree). If it does have two children, one is called the left child and the other is the right child. The children may or may not link back to their parent, so that may depend on your situation.
 
@@ -446,3 +445,5 @@ To remove the root node when it has two children:
 ## Summary
 
 There's a lot that goes into binary trees. They're tough, definitely. If they seem confusing at first, I'll include this in a Playground so there's an opportunity to practice using them or making one. This is going to come up in a later unit as well, so feel free to bookmark or refer back to this when we start covering Binary Search Trees.
+
+_Written by Digital Flagship, Swift 5_

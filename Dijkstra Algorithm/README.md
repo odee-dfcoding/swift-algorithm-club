@@ -80,7 +80,7 @@ To initialize our graph we have to set source vertex path length from source ver
 Great, now our graph is initialised and we can pass it to the Dijkstra's algorithm, let's start!
 
 Let's follow the algorithm's cycle and pick the first vertex which neighbours we want to check.
-All our vertices are not visited but there is only one has the smallest path length from start. It is A. This vertex is the first one which neighbors we will check.
+All our vertices are not visited but there is only one that has the smallest path length from start. It is A. This vertex is the first one which neighbors we will check.
 First of all, set this vertex as visited.
 
 A.visited = true

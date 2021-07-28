@@ -82,7 +82,7 @@ array[parent(i)] >= array[i]
 
 Verify that this heap property holds for the array from the example heap.
 
-As you can see, these equations allow us to find the parent or child index for any node without the need for pointers. It is complicated than just dereferencing a pointer, but that is the tradeoff: we save memory space but pay with extra computations. Fortunately, the computations are fast and only take **O(1)** time.
+As you can see, these equations allow us to find the parent or child index for any node without the need for pointers. It is more complicated than just dereferencing a pointer, but that is the tradeoff: we save memory space but pay with extra computations. Fortunately, the computations are fast and only take **O(1)** time.
 
 It is important to understand this relationship between array index and position in the tree. Here is a larger heap which has 15 nodes divided over four levels:
 

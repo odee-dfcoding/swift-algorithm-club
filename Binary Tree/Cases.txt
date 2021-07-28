@@ -1,0 +1,74 @@
+# Cases
+
+{{TOC}}
+
+## Not root, no children
+
+1. Node is a left child
+
+	a. Change parent.leftBinaryTree to nil
+	
+2. Node is a right child
+
+	a. Change parent.rightBinaryTree to nil
+
+## Not root, 1 child
+
+1. Assign child.parent to removalNode.parent
+2. Node is a left child
+
+	a. Change parent.leftBinaryTree to child
+	
+3. Node is a right child
+
+	a. Change parent.rightBinaryTree to child 
+
+## Not root, 2 children
+
+1. Find smallestChild, largestChild
+2. Change largestChild.parent to removalNode.parent
+3. Node is a left child
+
+	a. Change parent.leftBinaryTree to largestChild
+	
+4. Node is a right child
+
+	a. Change parent.rightBinaryTree to largestChild
+	
+5. Add smallestChild to root.addTree(smallestChild)
+
+## Root, no children
+
+1. Set value to nil
+
+## Root, 1 child
+
+1. Set nodeToRemove.value = child.value
+2. Set nodeToRemove.leftBinaryTree = child.leftBinaryTree
+3. Set nodeToRemove.rightBinaryTree = child.rightBinaryTree
+4. Set nodeToRemove.leftBinaryTree?.parent to nodeToRemove
+5. Set nodeToRemove.rightBinaryTree?.parent to nodeToRemove
+
+## Root, 2 children
+
+1. Find smallestChild, largestChild
+2. Set nodeToRemove.value = largestChild.value
+3. Set nodeToRemove.leftBinaryTree = largestChild.leftBinaryTree
+4. Set nodeToRemove.rightBinaryTree = largestChild.rightBinaryTree
+5. Set nodeToRemove.leftBinaryTree?.parent to nodeToRemove
+6. Set nodeToRemove.rightBinaryTree?.parent to nodeToRemove
+7. Run nodeToRemove.addTree(smallestChild)
+
+
+
+Optional(43) 
+	{ Optional("Optional(0) 
+		{ Optional(\"Optional(3) 
+			{ Optional(\\\"Optional(9) 
+				{ nil, nil} \\\"), nil}
+			 \"), Optional(\"Optional(5) 
+			 { Optional(\\\"Optional(7) 
+				 { nil, nil} \\\"), nil} \")} 
+				 Optional("Optional(1) 
+				 { Optional(\"Optional(2) 
+	{ Optional(\\\"Optional(8) { nil, nil} \\\"), nil} \"), Optional(\"Optional(4) { Optional(\\\"Optional(6) { nil, nil} \\\"), nil} \")} ")} 

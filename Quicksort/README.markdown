@@ -329,6 +329,8 @@ func quicksortHoare<T: Comparable>(_ a: inout [T], low: Int, high: Int) {
 
 I'll leave it as an exercise for the reader to figure out exactly how Hoare's partitioning scheme works. :-)
 
+> **Note** (Sam) This is really new, so [click here if you'd like to see it as a gif.](https://github.com/odee-dfcoding/SwiftAlgorithmClubPrivate/blob/master/Quicksort/Images/HoaresPartitioning.gif)
+
 ## Picking a good pivot
 
 Lomuto's partitioning scheme always chooses the last array element for the pivot. Hoare's scheme uses the first element. But there is no guarantee that these pivots are any good.

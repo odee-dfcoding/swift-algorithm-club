@@ -2,7 +2,7 @@
 
 > This topic has been tutorialized [here](https://www.raywenderlich.com/144083/swift-algorithm-club-swift-linked-list-data-structure)
 
-## Preface (Sam)
+## Preface 
 
 Before you continue on to the rest of the article, I wanted to take a moment to call out a term used frequently here and in computer science: pointer. 
 
@@ -10,9 +10,7 @@ In section 2.4 of App Development with Swift, the book talked briefly about clas
 
 “So the constant or variable does not contain the value itself, it points to the value in memory.”[1]
 
-Pointers are just constants or variables that _point_ to classes, whereas constants and variables for structs just store the value, not where it is in memory. 
- 
-Back to the article.
+Pointers are just constants or variables that store the _address_ of the value, or point to where it is, whereas constants and variables for structs just store the value, not its address. 
 
 ## Linked Lists
  

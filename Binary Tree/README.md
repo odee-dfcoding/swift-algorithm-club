@@ -446,4 +446,5 @@ To remove the root node when it has two children:
 
 There's a lot that goes into binary trees. They're tough, definitely. If they seem confusing at first, I'll include this in a Playground so there's an opportunity to practice using them or making one. This is going to come up in a later unit as well, so feel free to bookmark or refer back to this when we start covering Binary Search Trees.
 
-_Written by Digital Flagship, Swift 5_
+_Edited by Digital Flagship, Swift 5_
+_Written for Swift Algorithm Club by Matthijs Hollemans_
